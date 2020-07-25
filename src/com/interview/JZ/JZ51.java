@@ -1,4 +1,4 @@
-package com.interviews.array;
+package com.interview.JZ;
 
 public class JZ51 {
     public static int[] multiply(int[] A) {
