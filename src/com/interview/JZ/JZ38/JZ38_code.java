@@ -9,28 +9,41 @@ public class JZ38_code {
         return Tleft > Tright ? ( Tleft+1 ) : ( Tright+1 );
     }
 
-    public static void main(String...args)
+    public static void main(String[] args)
     {
-        //
-        TreeNode treeNode8= new TreeNode(8);
-        TreeNode treeNode6= new TreeNode(6);
-        TreeNode treeNode10= new TreeNode(10);
-        TreeNode treeNode5= new TreeNode(5);
-        TreeNode treeNode7= new TreeNode(7);
-        TreeNode treeNode9= new TreeNode(9);
-        TreeNode treeNode11= new TreeNode(11);
-        //
-        treeNode8.left= treeNode6;
-        treeNode8.right= treeNode10;
-        treeNode6.left= treeNode5;
-        treeNode6.right= treeNode7;
-        treeNode10.left= treeNode9;
-        treeNode10.right= treeNode11;
-        //
-        TreeNode head= treeNode8;
+
+        /*
+         *              5
+         *            /   \
+         *           4     6
+         *          / \   / \
+         *         12    13  6
+         *        / \       / \
+         *       9   1     5   1
+         *
+         */
+
+        TreeNode a= new TreeNode(5);
+        TreeNode b= new TreeNode(4);
+        TreeNode c= new TreeNode(6);
+        TreeNode d= new TreeNode(12);
+        TreeNode e= new TreeNode(13);
+        TreeNode f= new TreeNode(6);
+        TreeNode g= new TreeNode(9);
+        TreeNode h= new TreeNode(1);
+        TreeNode i= new TreeNode(5);
+        TreeNode j= new TreeNode(1);
+        a.left= b;
+        a.right= c;
+        b.left= d;
+        c.left= e;
+        c.right= f;
+        d.left= g;
+        d.right= h;
+        f.left= i;
+        f.right= j;
         JZ38_code s = new JZ38_code();
-        int res = s.TreeDepth(head);
-        System.out.println(res);
+        System.out.println(s.TreeDepth(a));
     }
 
 }
