@@ -10,7 +10,7 @@ package com.interview.JZ;
 public class JZ37 {
 
     //找出第一次出现的位置
-    private int getFirst(int[] nums, int k, int start, int end){
+    private static int getFirst(int[] nums, int k, int start, int end){
         if(start > end){
             return -1;
         }
@@ -32,7 +32,7 @@ public class JZ37 {
     }
 
     //找出最后一次出现的位置
-    private int getLast(int[] nums, int k, int start, int end){
+    private static int getLast(int[] nums, int k, int start, int end){
         if(start > end){
             return -1;
         }
@@ -53,7 +53,7 @@ public class JZ37 {
         return getLast(nums, k, start, end);
     }
 
-    public int getNumberOfK(int[] nums,int k){
+    public static int getNumberOfK(int[] nums,int k){
         int number = 0;
         int len = nums.length;
         if(nums != null && len > 0){
@@ -66,10 +66,16 @@ public class JZ37 {
         return number;
     }
 
+//    public static void main(String[] args) {
+//        JZ37 m1 = new JZ37();
+//        int[] nums = {1,2,3,3,3,3,4,5};
+//        int count = m1.getNumberOfK(nums, 3);
+//        System.out.println(count);
+//    }
+
     public static void main(String[] args) {
-        JZ37 m1 = new JZ37();
         int[] nums = {1,2,3,3,3,3,4,5};
-        int count = m1.getNumberOfK(nums, 3);
+        int count = getNumberOfK(nums, 3);
         System.out.println(count);
     }
 
