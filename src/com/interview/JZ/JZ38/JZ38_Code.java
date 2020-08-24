@@ -1,6 +1,6 @@
 package com.interview.JZ.JZ38;
 
-public class JZ38_code {
+public class JZ38_Code {
     public int TreeDepth(TreeNode root) {
         if( root== null )
             return 0;
@@ -42,7 +42,7 @@ public class JZ38_code {
         d.right= h;
         f.left= i;
         f.right= j;
-        JZ38_code s = new JZ38_code();
+        JZ38_Code s = new JZ38_Code();
         System.out.println(s.TreeDepth(a));
     }
 
