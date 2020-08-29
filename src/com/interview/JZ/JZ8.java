@@ -10,5 +10,5 @@ public class JZ8 {
             return target;
         return JumpFloor(target - 1) + JumpFloor(target - 2);
     }
-    
+
 }
