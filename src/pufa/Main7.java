@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Main7 {
     /*
-    题目：字符串去重
+    题目：字符串去重（面试）
     思路：新建一个List集合，从头到尾遍历字符串，判断是否包含访问到的字符，如果不包含，将其添加到Stringbuffer中，
     主要使用list.contains()检测重复；
      */
