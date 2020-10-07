@@ -17,12 +17,12 @@ public class Main1 {
         System.out.println(findCharInPlace(str));
     }
 
-    public static String findCharInPlace(String str){
-        if(str.length() <= 0)
+    public static String findCharInPlace(String str) {
+        if (str.length() <= 0)
             return null;
         boolean flag = false;
 
-        for(int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             flag = false;
             for (int j = 0; j < str.length(); j++) {
                 if (i != j && str.charAt(i) == str.charAt(j)) {
@@ -38,6 +38,7 @@ public class Main1 {
 
         return "";
     }
+}
 
 
 
@@ -77,6 +78,3 @@ public class Main1 {
     }
 
      */
-
-
-}
