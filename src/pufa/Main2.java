@@ -1,13 +1,20 @@
 package pufa;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main2 {
     /*
     题目：数组排序；
      */
     public static void main(String[] args) {
-        int[] array = {5,2,66,3,7};
+        //int[] array = {5,2,66,3,7};
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int[] array = new int[m];
+        for(int i = 0; i < array.length; i++){
+            array[i] = sc.nextInt();
+        }
         System.out.println(Arrays.toString(bubbleSort(array)));
     }
 
