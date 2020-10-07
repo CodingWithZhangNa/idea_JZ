@@ -1,5 +1,7 @@
 package pufa;
 
+import java.util.Scanner;
+
 public class Main1 {
     /*
     题目：找出给定字符串中第一个不重复的元素
@@ -9,10 +11,46 @@ public class Main1 {
      */
 
     public static void main(String[] args) {
-        String str = "tooth";
+        //String str = "toothbbc";
+        Scanner in = new Scanner(System.in);
+        String str = in.nextLine();
         System.out.println(findCharInPlace(str));
     }
 
+    public static String findCharInPlace(String str){
+        if(str.length() <= 0)
+            return null;
+        boolean flag = false;
+
+        for(int i = 0; i < str.length(); i++) {
+            flag = false;
+            for (int j = 0; j < str.length(); j++) {
+                if (i != j && str.charAt(i) == str.charAt(j)) {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (!flag) {
+                return str.charAt(i) + "";
+            }
+        }
+
+        return "";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     public static String findCharInPlace(String str){
         boolean flag = false;
         if(str.length() <= 0)
@@ -37,6 +75,8 @@ public class Main1 {
 
 
     }
+
+     */
 
 
 }
