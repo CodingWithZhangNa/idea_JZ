@@ -45,16 +45,18 @@ public static void main(String[] args) {
         }
     }
     System.out.println("奇数为" + odd +"个，偶数为" + even +"个");
+    String str = (odd > even) ? "yes" : "no";
+    System.out.println(str);
 
 }
 
     private static void printArrays(int[] arr) {
-        System.out.println("{");
+        System.out.print("{");
         for(int i = 0; i < arr.length; i++){
             if(i != arr.length - 1){
-                System.out.println(arr[i] + ",");
+                System.out.print(arr[i] + ",");
             }else{
-                System.out.println(arr[i] + "}");
+                System.out.print(arr[i] + "}");
             }
         }
         System.out.println();
