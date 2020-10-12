@@ -21,9 +21,10 @@ public class Main14 {
                 temp[i] = arr[i];
         }
 
-        for(int i = 0; i < temp.length;i++){
-            if(temp[i] > 0)
+        for (int i = 0; i < temp.length; i++) {
+            if (temp[i] > 0) {
                 System.out.print(temp[i] + " ");
+            }
         }
     }
 
