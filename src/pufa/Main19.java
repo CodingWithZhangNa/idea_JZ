@@ -13,24 +13,24 @@ public class Main19 {
     public static void main(String[] args) {
         //int[] nums = {1,2,3,3,4,4,5,5,6,6};
         Scanner in = new Scanner(System.in);
-        while (in.hasNext()) {
-            String str = in.nextLine();
-            StringBuilder s = new StringBuilder();
-            for (int i = 1; i < str.length() - 1; i++) {
-                s.append(str.charAt(i));
-            }
-            str = s.toString();
-            String[] array = str.split(",");
-            int[] arr = new int[array.length];
-            for (int i = 0; i < array.length; i++) {
-                arr[i] = Integer.parseInt(array[i]);
-            }
-            int[] num1 = new int[1];
-            int[] num2 = new int[1];
-            findAppearanceOnce(arr, num1, num2);
-            System.out.println("第一个数字: " + num1[0]);
-            System.out.println("第二个数字: " + num2[0]);
+        //while (in.hasNext()) {
+        String str = in.nextLine();
+        StringBuilder s = new StringBuilder();
+        for (int i = 1; i < str.length() - 1; i++) {
+            s.append(str.charAt(i));
         }
+        str = s.toString();
+        String[] array = str.split(",");
+        int[] arr = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            arr[i] = Integer.parseInt(array[i]);
+        }
+        int[] num1 = new int[1];
+        int[] num2 = new int[1];
+        findAppearanceOnce(arr, num1, num2);
+        System.out.println("第一个数字: " + num1[0]);
+        System.out.println("第二个数字: " + num2[0]);
+        //}
     }
 
     public static void findAppearanceOnce(int[] nums, int[] num1, int[] num2) {
