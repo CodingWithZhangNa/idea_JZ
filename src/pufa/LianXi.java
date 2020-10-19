@@ -1,14 +1,10 @@
 package pufa;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main2 {
-    /*
-    题目：数组排序；
-     */
+public class LianXi {
+
     public static void main(String[] args) {
-        //int[] array = {5,2,66,3,7};
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
             String str = in.nextLine();
@@ -22,21 +18,22 @@ public class Main2 {
             for (int i = 0; i < array.length; i++) {
                 arr[i] = Integer.parseInt(array[i]);
             }
-            System.out.println(Arrays.toString(bubbleSort(arr)));
+            int len = arr.length;
+            System.out.print("[");
+            for (int i = 0; i < len - 1; i++) {
+                if (arr[i] == arr[i + 1]) continue;
+                for (int j = i + 1; j < len; j++) {
+                    if (arr[j] == arr[j - 1]) continue;
+                    for (int k = j + 1; k < len; k++) {
+                        if (arr[k] == arr[k - 1]) continue;
+                        if (arr[i] + arr[j] + arr[k] == 1) {
+                            System.out.print("[" + arr[i] + "," + arr[j] + "," + arr[k] + "]");
+                        }
+                    }
+                }
+            }
+            System.out.print("]");
         }
     }
 
-    public static int[] bubbleSort(int[] array){
-        for(int i = 0; i < array.length; i++){
-            for(int j = 0; j < array.length - i - 1; j++){
-                int temp;
-                if(array[j] > array[j+1] ){
-                    temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
-                }
-            }
-        }
-        return array;
-    }
 }
